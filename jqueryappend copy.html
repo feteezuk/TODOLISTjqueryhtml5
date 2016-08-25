@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style >
+  body{
+    background-color:cyan;
+    text-align:center;
+  }
+  h2{
+    border-bottom:16px solid red;
+  }
+  li{
+    width:100px;
+    margin:auto;
+  }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append(" <span style='color:red; font-weight:bold;'>Appended text</span>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>One more item</li>");
+  });
+  $("#btn3").click(function(){
+    $("ol").attr("contenteditable","false");
+  });
+   $("#btn4").click(function(){
+    $("ol").attr("contenteditable","true");
+  });
+});
+</script>
+</head>
+
+<body>
+
+<h2>MY TO DO LIST MADE USING JQUERY</h2>
+<p>My initial paragraph.</p>
+<p>Just another paragraph.</p>
+<ol contenteditable="true">
+<li>This is item 1</li>
+<li>This is item 2</li>
+</ol>
+<button id="btn1">More text</button>
+<button id="btn2">More items</button>
+<button id="btn4">Edit List</button>
+<button id="btn3">Save List</button>
+
+</body>
+</html>
